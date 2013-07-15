@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>.::Grupo PCP::.</title>
+<script src="js/jquery-1.8.2.min.js" type="text/javascript" charset="utf-8"></script> 
+<script src="js/javascript_accordion.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="css/mobile.css" />
+<link rel="stylesheet" href="css/style.css" />
+
+<script>
+  function cargar(div, desde)
+  {
+       $(div).load(desde);
+  }
+  </script>
+  <script>  
+      $.ajaxSetup({ cache: false });
+  </script>
+  <script type="text/javascript">
+  function getUrlVars()
+  {
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)    {
+       hash = hashes[i].split('=');
+       vars.push(hash[0]);
+       vars[hash[0]] = hash[1];
+    }
+    return vars;
+  }
+  </script>
+
+  
+</head>
+<body>
+<div class="m">
+    <div class"header">
+      <!-- intro -->
+      <div id="container">
+        
+       
+          <img class="logo_h" src="images/mobile/logo_header.png"/>
+        
+          <a href="index.html"><img class="header_menu" src="images/mobile/icono_menu.png" alt=" menu " /></a>
+       
+      </div>
+    </div>
+    
+    <div id="change" class="change"></div>
+    <div id="change1" class="change"></div>
+    <div id="change2" class="change"></div>
+    <div id="change3" class="change"></div>
+    <div id="change4" class="change"></div>
+
+    <script>
+      var url = getUrlVars()["url"];
+          
+          switch(url)
+          {
+            case 'empresa_01.html':
+              $('#change').load('empresa_01.html');
+              $('#change1').load('empresa_01_1.html');
+              $('#change2').load('empresa_01_2.html');
+              $('#change3').load('empresa_01_3.html');
+              break;
+
+            case 'empresa_02.html':  
+              $('#change').load('empresa_02.html');
+              $('#change1').load('empresa_02_1.html');
+              $('#change2').load('empresa_02_2.html');
+              $('#change3').load('empresa_02_3.html');
+              break;
+
+            case 'empresa_03.html': 
+              $('#change').load('empresa_03.html');
+              $('#change1').load('empresa_03_1.html');
+              break;
+
+            case 'empresa_05.html':  
+              $('#change').load('empresa_05.html');
+              $('#change1').load('empresa_05_1.html');
+              break;        
+
+            default:
+              $('#change').load(url); 
+              break;
+          }
+          
+
+   
+      </script>
+      <div>
+        <img class="imgs" src="images/mobile/footer.jpg" alt="foot" />
+      </div>
+  </div>
+
+</body>
+</html>

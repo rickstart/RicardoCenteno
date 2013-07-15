@@ -1,0 +1,142 @@
+* { 
+/*margin: 0px;padding: 0px; */
+outline: 0;}
+
+/*html, body {
+	width: 100%;
+}
+
+body {
+	background: #366;font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+*/
+/*NIVEL 0 -Alinea todo el menu y establece el ancho total*/
+#menuTabla {
+	width: 590px;
+	margin: 0 auto;
+	position: relative;
+	top:-34px;
+	left:90px;
+	padding:0;
+	z-index:200;
+}
+
+/*.menuEsp {
+	position:relative;
+	left: -100px;
+	background-color:
+}*/
+
+#menuTabla ul { list-style-type: none;}
+/*NIVEL 0 -Flota cada li de el menu Nivel Home, About us, Brands y Contact*/
+#menuTabla ul li.nivel1 { 	float:left; /* width: 162px;*/}
+#menuTabla ul li { text-align: center;}
+
+/*#menuTabla ul li.primera { border-top: solid 1px #FFF;}*/
+
+/*NIVEL 0 -Le quita a todos los links del menu Nivel Home, About us, Brands y Contact el fondo y el outline*/
+#menuTabla ul li a {
+	display: block;text-decoration: none;color: #fff;/*background-color: #399;border: solid 1px #fff;border-top: none;padding: 8px 8px 9px;*/
+	position: relative;
+}
+/*Roll over Nivel 1*/
+#menuTabla ul li:hover {position: relative; color: #000;
+/*background-color: #6CC;*/
+}
+
+#menuTabla ul li a:hover, #menuTabla ul li:hover a.nivel1 {
+	/*background-color: #6CC;*/
+	color: #000;position: relative;}
+	
+/* Oculta todo el 1er nivel*/
+#menuTabla ul li a.nivel1 {display: block!important;display: none;position: relative;}
+
+/* Oculta todo el 2do nivel*/
+#menuTabla ul li ul {display: none;}
+
+/*Modifica el tamaño del UL que contiene todos los links 2do nivel, About Us, Values, Designer*/
+#menuTabla ul li:hover > ul {
+	 width: 590px;
+	display: block;position: absolute;left: -120px;top:23px;
+}
+
+/*Modifica el tamaño de los links 2do nivel, About Us, Values, Designer*/
+#menuTabla ul li ul li a {
+	float:left;
+	width:inherit;
+	/*background-color: #399;*/
+	color: #FFF;
+	position: relative;
+}
+	
+#menuTabla ul li ul li a:hover {
+	position: relative;/*background-color: #6CC*/;color: #000;
+}
+
+
+/*#menuTabla ul li a.nivel1ie {width: 144px;padding: 8px;}
+
+No me sirve
+#menuTabla ul li a.subnivel {padding-bottom: 0px;}*/
+
+/*Acomoda la posicion de cada nivel -------------------------------------------------------------------------------*/
+#menuTabla ul li a:hover ul.nivel2, #menuTabla ul.nivel2 li a:hover ul.nivel3 {
+	display: block;position: absolute;left: -500px;top:-1px;
+}
+
+/*Posicion reltativa solo de el menu Brands*/
+#menuTabla ul li ul.nivel2b {
+	left: -300px;/*-330*/
+}
+/*Posicion reltativa solo de el submenu Designer*/
+#menuTabla ul li ul li ul.subdesigner {
+	left: -35px;
+}
+
+
+
+#menuTabla ul li ul li ul.subdesigner a, #menuTabla ul li ul li ul.subluxory a, #menuTabla ul li ul li ul.sublifestyle a, #menuTabla ul li ul li ul.subsportswear a, #menuTabla ul li ul li ul.subbeauty a, #menuTabla ul li ul li ul.subfootwear a, #menuTabla ul li ul li ul.subHouseware a  {
+	display:block;
+	background-color:#bbc7bd;
+	height:20px;/*17*/
+	color:#333;
+	padding-top:4px;
+	padding-right:4px;
+	font-size:11px;
+	text-transform:uppercase;
+}
+#menuTabla ul li ul li ul.subdesigner a:Hover, #menuTabla ul li ul li ul.subluxory a:Hover, #menuTabla ul li ul li ul.sublifestyle a:Hover, #menuTabla ul li ul li ul.subsportswear a:Hover, #menuTabla ul li ul li ul.subbeauty a:Hover, #menuTabla ul li ul li ul.subfootwear a:Hover, #menuTabla ul li ul li ul.subHouseware a:Hover {
+	color:#507047;
+}
+
+/*Posicion reltativa solo de el submenu Luxory*/
+#menuTabla ul li ul li ul.subluxory {
+	left: 47px;
+}
+/*Posicion reltativa solo de el submenu LifeStyle*/
+#menuTabla ul li ul li ul.sublifestyle {
+	left: 115px;
+}
+/*Posicion reltativa solo de el submenu SportsWear*/
+#menuTabla ul li ul li ul.subsportswear {
+	left: 197px;
+}
+/*Posicion reltativa solo de el submenu Beauty*/
+#menuTabla ul li ul li ul.subbeauty {
+	left: 300px;/*290*/
+}
+/*Posicion reltativa solo de el submenu Footwear*/
+#menuTabla ul li ul li ul.subfootwear {
+	left: 371px;
+}
+/*Posicion reltativa solo de el submenu Houseware*/
+#menuTabla ul li ul li ul.subHouseware {
+	left: 367px;/*433*/
+}
+
+
+table.falsa {
+	border-collapse:collapse;
+	border:0px;
+	float: left;
+}

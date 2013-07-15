@@ -1,0 +1,42 @@
+/* Estilos Axo.com.mx */
+
+#logo_idioma {
+	margin: 0 auto;
+    position:relative;
+	top:235px;
+	width:580px;
+	height:18;
+	color: #FFF;
+	text-align:center;
+}
+
+body {
+	/*background: #050706 url(../images/bg_inicio.jpg) 50% 0 repeat-x;*/
+	background: #050706 url(../images/patron.jpg) repeat;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 12px;
+	font-weight: 100;
+}
+
+a {
+	text-decoration: none;
+}
+a:link {
+	color: #CCC;
+	
+}
+a:hover {
+	color: #FFF;
+	text-decoration: underline;
+}
+a:visited {
+	color: #CCC;	
+}
+
+.linkHome{
+	margin-top:20px;
+}

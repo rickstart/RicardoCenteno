@@ -1,0 +1,59 @@
+<script type="text/javascript">
+	var RecaptchaOptions = 
+	{
+ 		lang : 'es',
+    	theme : 'white',
+
+ 	};
+ </script>
+
+
+				<!--<div class="img_sub">
+					<img src="images/fotos/contacto2.png">
+                </div>-->
+                
+                <p>Si deseas más información llena la siguiente forma y nos pondremos en contacto contigo.</p><br />
+		
+			<div class="list">
+					<ol>
+						<li style="list-style-image: url('images/contacto/icono_telefono.png');">T. 5255-9200 ó 01-800-000-3121
+						</li><br />
+						<li style="list-style-image: url('images/contacto/icono_direccion.png');">D, Presidente Masaryk 111, piso 5, Col.Chapultepec Morales, C.P. 11570, México D.F.</li><br />
+					</ol>
+			</div>
+            
+		<p>Los campos con * son obligatorios</p>
+		</br></br>
+
+		<form action="send.php" method="post"> 
+			<label for="nombre">* Nombre: </label>  <br>
+			<input type="text" name="nombre"  maxlength="80"><br> 
+			<label for="email">* Empresa: </label><br>
+			<input type="text" name="empresa"  maxlength="60"><br> 
+			<label for="email">* Teléfono: </label><br>
+			<input type="text" name="telefono"  maxlength="60"><br>
+			<label for="email">* Email: </label><br>
+			<input type="text" name="email"  maxlength="60"><br> 
+			<label for="mensaje">* Mensaje: </label><br>  
+			<textarea name="mensaje" cols="12%" rows="5"></textarea> <br><br>
+			<div id="recaptcha">
+				<script type="text/javascript"
+	       			src="http://www.google.com/recaptcha/api/challenge?k=6LcbCt4SAAAAAP8kfIx8wG7xTYcYIQmY_-0xQ3E2">
+	    		</script>
+	    		<noscript>
+			       <iframe src="http://www.google.com/recaptcha/api/noscript?k=6LcbCt4SAAAAAP8kfIx8wG7xTYcYIQmY_-0xQ3E2"
+			           height="300" width="500" frameborder="0"></iframe><br>
+			       <textarea name="recaptcha_challenge_field" rows="3" cols="40">
+			       </textarea>
+			       <input type="hidden" name="recaptcha_response_field"
+			           value="manual_challenge">
+			    </noscript><br>
+			</div>
+			<label for="enviar">
+			<input type="image" class="btn_send2" name="enviar" src="images/contacto/btn_enviar.png" ></label>
+ 		</form>
+        
+ 	</div>
+    
+    </div>
+				

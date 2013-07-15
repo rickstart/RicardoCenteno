@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+
+#menuTabla {
+	left:60px;
+}
+/*Posicion reltativa solo de el submenu Quienes Somos*/
+#menuTabla ul li ul.subQuienesSomos {
+	left: -170px;
+}
+
+.directorioTiendasEsp {
+	width:120px;
+}

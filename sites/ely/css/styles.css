@@ -1,0 +1,308 @@
+﻿@font-face {
+    font-family: 'Orator';
+    src: url('font/OratorStd-Slanted.eot');
+   	src: local('OratorStd Slanted'), local('OratorStdSlanted-Regular'), 
+   	url('font/OratorStd.otf') format('opentype'), 
+   	url('OratorStd.svg#QuicksandLight-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html,body
+{
+ 	font-family: 'Orator';
+	width:100%;
+	height:100%;
+	overflow-x: none;
+	background:#00002a;
+}
+/*** Fonts ***
+**************/
+.fwhite
+{
+	font-family: 'Orator';
+	font-style: italic;
+	color: #fff;
+}
+
+.fpink
+{
+	font-family: 'Orator';
+	font-style: italic;
+	color: #ea0a86;
+}
+
+.fblue
+{
+	font-family: 'Orator';
+	font-style: italic;
+	color: #04a5dc;
+}
+
+.fmedium
+{
+	
+	font-size:large;
+	font-weight: bold;
+	
+}
+.flarge
+{
+	
+	font-size: 23px;
+	
+}
+.falignr
+{
+	text-align: right;
+}
+/*** HOME ***
+************/
+
+.video_portada{
+	position:relative;
+	z-index:1;
+	top:10%;
+	left: 30%;
+	width: 540px;
+	height:548px;
+	
+}
+
+/*** DVD ***
+************/
+
+.dvd1{
+	position:relative;
+	z-index:1;
+	top:15%;
+	left: 65%;
+	width: 50%;
+	
+}
+
+
+.dvd2{
+	position:relative;
+	z-index:1;
+	top:15%;
+	
+	text-align: right;
+	width: 65%;
+}
+.dvd1 ul ,.dvd2 ul
+{
+	list-style-type: none;
+
+}
+
+/*** Menu ***
+ ************/
+#menu
+{
+	position: relative;
+	background: url(../images/menu/logo_ciclos.png) no-repeat;
+	width: 30%;
+	height: 100%;
+}
+ .navigation{
+	position: fixed;
+	z-index:1;
+	top:30%;
+}
+.navigation li{
+	list-style-type: none;
+	
+}
+
+.rayo 
+{
+	position:fixed;
+	top:10%;
+	left:230px;
+	
+	margin-top:-41px;
+	margin-left:-223px;
+	z-index:1;
+}
+.rayon 
+{
+	position:fixed;
+	top:15%;
+	left:220px;
+	
+	margin-top:-41px;
+	margin-left:-223px;
+	z-index:1;
+}
+/*** Audio ***
+ *************/
+ .audio{
+	position:fixed;
+	z-index:1;
+	top:80%;
+	left: 85%;
+}
+
+/*** bio ***
+ *************/
+.bioiframe{
+	background:#122253;
+	position:relative;
+	z-index:1;
+	top:20%;
+	left: 30%;
+
+}
+.bioBtn:hover
+{
+	opacity: 0.5;
+}
+
+/*** Video ***
+ *************/
+ .video{
+	position:relative;
+	z-index:1;
+	top:15%;
+	left: 30%;
+}
+
+
+/*** Herencia ***
+ ****************/
+.slide{
+	background-attachment: fixed;
+	width:100%;
+	height:100%;
+	position: relative;
+	
+}
+
+.wrapper{
+	width:80%;
+	height:80%;
+	position:absolute;
+	padding: 0;
+	background: url(../images/galeria/linea_superior.png) center center no-repeat;
+
+}
+.head
+{
+ 	
+	top:5%;
+	left: 30%;
+	position: absolute;
+}
+
+.headb
+{
+ 	
+	top:0%;
+	left: 30%;
+	
+}
+/*** Galeria ***
+ **************
+
+
+
+#galeria img:first-child{
+	position:absolute;
+	top: 100px;
+	left: 300px;
+}
+#galeria img:nth-child(2){
+	position:absolute;
+	top:100px;
+	left:500px;
+}
+#galeria img:nth-child(3){
+	position:absolute;
+	top:100px;
+	left:700px;
+}
+#galeria img:nth-child(4){
+	position:absolute;
+	top:100px;
+	left:900px;
+}
+#galeria img:nth-child(5){
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+*/
+.bely{
+	position:absolute;
+	top: 100px;
+	left: 300px;
+}
+.bconcierto{
+	position:absolute;
+	top:100px;
+	left:500px;
+}
+.bsound{
+	position:absolute;
+	top:100px;
+	left:700px;
+}
+.binvitado{
+	position:absolute;
+	top:100px;
+	left:900px;
+}
+
+
+/*** Hover Buttons ***
+ *********************/
+
+#btnFacebook:hover, #btnTwitter:hover{
+	opacity: 0.5;
+}
+
+/*** backgrounds ***
+ *******************/
+
+#home
+{
+	background: url(../images/backgrounds/bg_home.jpg) 0px 0px repeat fixed;
+	background-size: 100% 100%;	
+	
+}
+
+
+#dvd
+{
+	background: url(../images/backgrounds/bg_dvd.jpg) 0px 0px repeat fixed;
+	background-size: 100% auto;
+}
+
+#galeria
+{
+	background: #be2983 url(../images/backgrounds/bg_galeria.jpg) repeat ;
+	background-size: 100% 100%;	
+	
+	
+}
+
+
+#video
+{
+	background: black url(../images/backgrounds/bg_video.jpg) no-repeat ;
+	background-size: 100% 100%;
+}
+
+#bio
+{
+	background: #040033 url(../images/backgrounds/bg_bio.jpg)  no-repeat ;
+	background-size: 100% auto;
+}
+#tienda
+{
+	background: url(../images/backgrounds/bg_galeria.jpg) repeat ;
+	background-size: 100% 100%;
+}
+

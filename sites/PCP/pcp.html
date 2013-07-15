@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>.::GRUPO PCP::.</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" media="handheld and (max-width: 480px), screen and (max-device-width: 480px),screen and (max-width: 600px)" href="css/mobile.css" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    
+    <!--------SwapImage Script---------->
+		<script type="text/javascript" src="js/jquery.metadata.min.js"></script>
+        <script type="text/javascript" src="js/jquery.swapimage.min.js"></script>
+        
+        <!--Script SwapImage-->
+        <script type="text/javascript">
+                $.swapImage(".swapImage");    
+        </script>
+    
+	<script>
+	function cargar(div, desde)
+	{
+	     $(div).load(desde);
+	}
+	</script>
+	<script>	
+	    $.ajaxSetup({ cache: false });
+	</script>
+
+	<script type="text/javascript">
+
+
+	function swap(id, flag)
+	{
+		var path= "images/";
+		var path=path+flag;
+		
+		document.getElementById(id).src= path;
+	}
+
+
+
+
+	</script>
+</head>
+<body>
+<div id="web">
+	<div class="main">
+		<div class="logo">
+			<a href="index.html"><img class="scale_image" src="images/logo_PCP.png" ></a>
+		</div>
+
+		<div class="menu">
+			<div class="contact">
+				<a href="avisodeprivacidad.html" style="color:#68AA44;">LFDPPP y Avisos de Privacidad</a> |
+				<a href="contacto.html" style="color:#68AA44;">Contacto</a>
+				<a href="https://www.facebook.com/pcpseguros" target="_new"><img class="swapImage {src: 'images/menu/btn_facebook_roll.png'}" src="images/menu/btn_facebook.png" /></a>
+				<!--<a href=""><img class="swapImage {src: 'images/menu/btn_linkedin_roll.png'}" src="images/menu/btn_linkedin.png" /></a>-->
+			</div>
+			<div class="nav">
+				<a href="pcp.html">
+					<img id="pcp" src="images/menu/btn_PCP_roll.jpg"></a>
+				<a href="fuerza.html"
+				onmouseover="swap('fue','menu/btn_fuerza_roll.jpg'), swap('pcp','menu/btn_PCP.jpg')" 
+				onmouseout="swap('fue','menu/btn_fuerza.jpg'), swap('pcp','menu/btn_PCP_roll.jpg')" >
+					<img id="fue" name="image1" src="images/menu/btn_fuerza.jpg"></a>
+				<a href="empresa.html" 
+				onmouseover="swap('emp','menu/btn_empresariales_roll.jpg'), swap('pcp','menu/btn_PCP.jpg')" 
+				onmouseout="swap('emp','menu/btn_empresariales.jpg'), swap('pcp','menu/btn_PCP_roll.jpg')" >
+					<img id="emp" src="images/menu/btn_empresariales.jpg"></a>
+				<a href="persona.html"
+				onmouseover="swap('per','menu/btn_personales_roll.jpg'), swap('pcp','menu/btn_PCP.jpg')" 
+				onmouseout="swap('per','menu/btn_personales.jpg'), swap('pcp','menu/btn_PCP_roll.jpg')" >
+					<img id="per" src="images/menu/btn_personales.jpg"></a>
+				<a href="presencia.html"
+				onmouseover="swap('pres','menu/btn_presencia_roll.jpg'), swap('pcp','menu/btn_PCP.jpg')" 
+				onmouseout="swap('pres','menu/btn_presencia.jpg'), swap('pcp','menu/btn_PCP_roll.jpg')" >
+					<img id="pres" src="images/menu/btn_presencia.jpg"></a>
+				<a href="gobierno.html"
+				onmouseover="swap('gob','menu/btn_gobierno_roll.jpg'), swap('pcp','menu/btn_PCP.jpg')" 
+				onmouseout="swap('gob','menu/btn_gobierno.jpg'), swap('pcp','menu/btn_PCP_roll.jpg')" >
+					<img id="gob" src="images/menu/btn_gobierno.jpg"></a>
+			</div>
+		</div>
+
+		<div class="container">
+			<span class="txt_small">Usted esta aquí:</span>
+		
+			
+
+			<div id="change" class="art">
+			</div>
+
+			<script>
+	     		$('#change').load('pcp_01.html');
+	     		
+	 
+			</script>
+		</div>
+		
+	</div>
+
+	<img class="colores" src="images/lineas_colores.jpg">
+
+	<div class="footer">
+		<img class="logo_footer" src="images/logo_CP.png">
+		<div class="txt_footer">
+			<span>Masaryk 111 piso 5. Chapultepec Morales. México D.F. 11570 | T. 52559200</span>
+		</div>
+	</div>
+
+</div>
+
+
+<div class="mov1">
+    <div class"header">
+      <!-- intro -->
+      <div id="container">
+        
+       
+          <img class="logo_h" src="images/mobile/logo_header.png"/>
+        
+          <a href="index.html"><img class="header_menu" src="images/mobile/icono_menu.png" alt=" menu " /></a>
+       
+      </div>
+    </div>
+    
+    <div id="change0" class="change"></div>
+    <div id="change1" class="change"></div>
+    <div id="change2" class="change"></div>
+    <div id="change3" class="change"></div>
+    <div id="change4" class="change"></div>
+		<script>
+	     	  $('#change0').load('pcp_01.html');
+             
+            
+	 
+			</script>
+    
+      <div>
+        <img class="imgs" src="images/mobile/footer.jpg" alt="foot" />
+      </div>
+  </div>
+
+
+</body>
+
+</html>

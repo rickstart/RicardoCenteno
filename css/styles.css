@@ -1,0 +1,103 @@
+body
+{
+	background:url('../img/bg/wood.png');
+	width: 100%;
+	
+}
+.content
+{
+	position: relative;
+	background:url('../img/bg/notes.png') no-repeat;
+	width: 953px;
+	height: 1086px;	
+	margin: 5% 15% 5% 15%;
+
+
+}
+
+.thumb
+{
+	position: relative;
+	width: 75%;
+	height:1086px;
+	left: 200px;
+	z-index: 1;
+	
+}
+
+.nav
+{
+	position:absolute;
+	width: 250px;
+	left: 10%;
+	top:3%;
+	z-index: 1;
+	
+}
+
+.menu
+{
+	position:relative;
+	width: 200px;
+	left: 12%;
+	top:10%;
+	z-index: 1;
+
+}
+
+.img_menu
+{
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+.btn_menu
+{
+	position: relative;
+	width: 70%;
+	height: auto;
+	top:-320px;
+	left: 15%;
+
+}
+
+.title
+{
+	color: #fff;
+	font-size: 25px;
+}
+
+.pack
+{
+	width: 40%;
+	height: auto;
+	padding: 10% 30% 0% 30%;
+
+}
+
+.btn:hover
+{
+	opacity: 0.7;
+
+}
+
+.soc_icon
+{
+	width: 25%;
+	height: auto;
+}
+
+.web_thumb
+{
+	width: 35%;
+	height: auto;
+	padding: 5% 5% 5% 5%;
+}
+
+.mobile_thumb
+{
+	width: 25%;
+	height: auto;
+	padding: 5% 5% 5% 5%;
+}

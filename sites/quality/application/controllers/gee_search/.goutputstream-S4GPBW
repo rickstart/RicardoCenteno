@@ -1,0 +1,186 @@
+<?php
+	ini_set( 'default_charset', 'UTF-8' );
+	$searchs=new search();
+	switch($_GET['op']){
+		case 1:
+					# Recuperar estados
+					
+					$result=$searchs->getData("q=idestatus:1+AND+idfranquicia:71&rows=0&facet=true&facet.field=facet_estado&facet.field=idlocalidad_2&facet.mincount=1");
+					$result=json_decode($result,true);
+					$result1=$result['facet_counts']['facet_fields']['facet_estado'];
+					$result2=$result['facet_counts']['facet_fields']['idlocalidad_2'];
+					$ret=array();
+					$x=0;
+					foreach($result1 as $k=> $r){
+						if ($x==0){
+							$ret[]=array('name'=>trim($r),'id'=>$result2[$k]);
+							$x++;
+						}else{
+							$x=0;
+						}
+						
+					}
+					echo "<option value='0'>Seleccione un estado</option>";
+					foreach($ret as $r){
+						echo "<option value='{$r['id']}'>{$r['name']}</option>";
+					}
+					break;
+		case 2:
+					# Recuperar municipio
+					
+					$result=$searchs->getData("q=idestatus:1+AND+idfranquicia:71+AND+idlocalidad_2:".$_GET['idedo']."&rows=0&facet=true&facet.field=facet_municipio&facet.field=idlocalidad_3&facet.mincount=1");
+					$result=json_decode($result,true);
+					$result1=$result['facet_counts']['facet_fields']['facet_municipio'];
+					$result2=$result['facet_counts']['facet_fields']['idlocalidad_3'];
+					$ret=array();
+					$x=0;
+					foreach($result1 as $k=> $r){
+						if ($x==0){
+							$ret[]=array('name'=>trim($r),'id'=>$result2[$k]);
+							$x++;
+						}else{
+							$x=0;
+						}
+						
+					}
+					echo "<option value='0'>Seleccione un Municipio</option>";
+					foreach($ret as $r){
+						echo "<option value='{$r['id']}'>{$r['name']}</option>";
+					}
+					break;
+		case 3:
+					# Recuperar colonia
+					
+					$result=$searchs->getData("q=idestatus:1+AND+idfranquicia:71+AND+idlocalidad_3:".$_GET['idmun']."&rows=0&facet=true&facet.field=facet_colonia&facet.field=idlocalidad&facet.mincount=1");
+					$result=json_decode($result,true);
+					$result1=$result['facet_counts']['facet_fields']['facet_colonia'];
+					$result2=$result['facet_counts']['facet_fields']['idlocalidad'];
+					$ret=array();
+					$x=0;
+					foreach($result1 as $k=> $r){
+						if ($x==0){
+							$ret[]=array('name'=>trim($r),'id'=>$result2[$k]);
+							$x++;
+						}else{
+							$x=0;
+						}
+						
+					}
+					echo "<option value='0'>Seleccione una Colonia</option>";
+					foreach($ret as $r){
+						echo "<option value='{$r['id']}'>{$r['name']}</option>";
+					}
+					break;					
+		case 4:
+					# Recuperar tiposdeinmueble
+					
+					//$result=$searchs->getData("q=idestatus:1+AND+idfranquicia:71+AND+idlocalidad:".$_GET['idcol']."&rows=0&facet=true&facet.field=facet_tipoinmueble&facet.field=idtipoinmueble&facet.mincount=1&facet.sort=facet_tipoinmueble");
+					$result=$searchs->getData("q=idestatus:1+AND+idfranquicia:71+AND+idlocalidad_3:".$_GET['idmun']."&rows=0&facet=true&facet.field=facet_tipoinmueble&facet.field=idtipoinmueble&facet.mincount=1");
+					$result=json_decode($result,true);
+					$result1=$result['facet_counts']['facet_fields']['facet_tipoinmueble'];
+					$result2=$result['facet_counts']['facet_fields']['idtipoinmueble'];
+					$ret=array();
+					$x=0;
+					foreach($result1 as $k=> $r){
+						if ($x==0){
+							$ret[]=array('name'=>trim($r),'id'=>$result2[$k]);
+							$x++;
+						}else{
+							$x=0;
+						}
+						
+					}
+					echo "<option value='0'>Tipo de inmueble</option>";
+					foreach($ret as $r){
+						echo "<option value='{$r['id']}'>{$r['name']}</option>";
+					}
+					break;
+		case 5:
+					# Recuperar Tipooperacion
+					
+					$result=$searchs->getData("q=idestatus:1+AND+idfranquicia:71+AND+idtipoinmueble:".$_GET['idtipo']."&rows=0&facet=true&facet.field=facet_operacion&facet.field=idoperacion&facet.mincount=1");
+					$result=json_decode($result,true);
+					$result1=$result['facet_counts']['facet_fields']['facet_operacion'];
+					$result2=$result['facet_counts']['facet_fields']['idoperacion'];
+					$ret=array();
+					$x=0;
+					foreach($result1 as $k=> $r){
+						if ($x==0){
+							$ret[]=array('name'=>trim($r),'id'=>$result2[$k]);
+							$x++;
+						}else{
+							$x=0;
+						}
+						
+					}
+					echo "<option value='0'>Tipo de operación</option>";
+					foreach($ret as $r){
+						echo "<option value='{$r['id']}'>{$r['name']}</option>";
+					}
+					break;
+		case 10:
+					# Listado de resultados
+					//$result=$searchs->getData("q=idestatus:1+AND+idfranquicia:71+AND+idtipoinmueble:".$_GET['subtipoinm']."+AND+idoperacion:".$_GET['tipoinm']."+AND+idlocalidad:".$_GET['colonia']."+AND+idlocaliad_2:".$_GET['estado']."+AND+idlocalidad_3:".$_GET['municipio']."&rows=".$_GET['regs']."&start=".$_GET['start']."");
+					$result=$searchs->getData("q=idestatus:1+AND+idfranquicia:71+AND+idtipoinmueble:".$_GET['subtipoinm']."+AND+idoperacion:".$_GET['tipoinm']."+AND+idlocalidad_2:".$_GET['estado']."+AND+idlocalidad_3:".$_GET['municipio']."+AND+idlocalidad:".$_GET['colonia']."&rows=".$_GET['regs']."&start=".$_GET['start']."");
+					$result=json_decode($result,true);
+					$result=$result['response'];
+					break;	
+		case 11:
+					# Detalle de Propiedades
+					//$result=$searchs->getData("q=idestatus:1+AND+idfranquicia:71+AND+idtipoinmueble:".$_GET['subtipoinm']."+AND+idoperacion:".$_GET['tipoinm']."+AND+idlocalidad:".$_GET['colonia']."+AND+idlocaliad_2:".$_GET['estado']."+AND+idlocalidad_3:".$_GET['municipio']."&rows=".$_GET['regs']."&start=".$_GET['start']."");
+					$result=$searchs->getData("q=idestatus:1+AND+idfranquicia:71+AND+idtipoinmueble:".$_GET['idtipoinmueble']."+AND+idoperacion:".$_GET['idoperacion']."+AND+idlocalidad_2:".$_GET['idedo']."+AND+idlocalidad_3:".$_GET['idmun']."+AND+idlocalidad:".$_GET['idcol']."+AND+idinmueble:".$_GET['idinmueble']."&rows=".$_GET['regs']."&start=".$_GET['start']."");
+					//echo $result;
+					$result=json_decode($result,true);
+					$result=$result['response'];
+					//echo json_encode($result);
+					/*Lineas ha enviar para las pruebas de pintado */
+					//$result='{"numFound":1,"start":0,"docs":[{"idlocalidad_2":10058,"idlocalidad_3":10745,"tipoinmueble":"Departamento","facet_tipoinmueble":"Departamento","comision":2.5,"imagen_principal":"","tourweb":"0","latitud":19.362562,"longitud":-99.30116,"autos":2,"cuartos":3,"gas":"No","calle":"Hidalgo RESIDENCIAL HIDALGO","idvivienda":0,"rentavdia":0,"fecha_baja":"2012-02-05T06:00:00Z","rentavfin":0,"num_ext":"","monedavmes":"","monedavdia":"","fecha_alta":"2011-05-15T05:00:00Z","logo":"\/admin\/inmobiliarias\/logos\/112558.jpg","idusuario":123746,"idlocalidad":10763,"expira":1,"andenes":"0","descripcion_desa":"","web":"www.quality.com.mx","m2terr":0,"idinmueble":2000807723,"monedavsem":"","rentavmes":0,"monedavfin":"","iddesarrollo":0,"fecha_suspen":"2012-02-05T06:00:00Z","tour":"0","estatus":"Activo","facet_estatus":"Activo","amueblado":"No","operacion":"Venta","facet_operacion":"Venta","precio_pesos":1445000,"idusuario_web":0,"alfaclave":"QU0078V000UJ","tel":"(55) 5251 1521","no_deptos":10,"m2rentable":0,"no_casas":0,"idtipoinmueble":8,"calle1":"","calle2":"","fecha_modif":"2012-01-06T06:00:00Z","claveinterna":"RAV-4036","msuperficie":0,"usuario_tel":"(55) 52511521","precio":1445000,"elevadores":0,"unidad":"T","nivel":"","rentavsem":0,"desarrollo":0,"mfondo":0,"email":"habitat@quality.com.mx","niveles":"4","usuario_email":"habitat@quality.com.mx","banos":2,"usuario":"Quality Inmobiliaria HABITAT","facet_usuario":"Quality Inmobiliaria HABITAT","gmap_confirma":1,"moneda":"P","idinmueble_pg":2000807723,"colonia":" Cuajimalpa ","facet_colonia":" Cuajimalpa ","infonavit":1,"idempresa":112558,"idpaquete":1,"id":"2000807723-V","edad":1,"email_desa":"","m2cons":106,"gmaps":"19.362562463638700,-99.301158958007800","comentarios":"","idcanal":1,"mfrente":0,"num_int":"","idoperacion":"1","estado":" Distrito Federal ","facet_estado":" Distrito Federal ","municipio":" Cuajimalpa De Morelos ","facet_municipio":" Cuajimalpa De Morelos ","empresa":"Quality Inmobiliaria H\u00e1bitat","facet_empresa":"Quality Inmobiliaria H\u00e1bitat","idestatus":1,"col_cp":" 5000","bsq_colonia":" Cuajimalpa ","facet_bsqcolonia":" Cuajimalpa ","bsq_idcolonia":10763,"origen":"M3","idfranquicia":[1,4,14,71,86,93],"qry":["Departamento","Hidalgo RESIDENCIAL HIDALGO","","Venta","RAV-4036"," Cuajimalpa ",""," Distrito Federal "," Cuajimalpa De Morelos ","Quality Inmobiliaria H\u00e1bitat"]}]}';
+					//$result=json_decode($result, true);
+					break;		
+		case 13:
+					# Detalle de Propiedades
+					//$result=$searchs->getData("q=idestatus:1+AND+idfranquicia:71+AND+idtipoinmueble:".$_GET['subtipoinm']."+AND+idoperacion:".$_GET['tipoinm']."+AND+idlocalidad:".$_GET['colonia']."+AND+idlocaliad_2:".$_GET['estado']."+AND+idlocalidad_3:".$_GET['municipio']."&rows=".$_GET['regs']."&start=".$_GET['start']."");
+					$result=$searchs->getData("q=idestatus:1+AND+idfranquicia:71&");
+					//echo $result;
+					$result=json_decode($result,true);
+					$result=$result['response'];
+					//echo json_encode($result);
+					/*Lineas ha enviar para las pruebas de pintado */
+					//$result='{"numFound":1,"start":0,"docs":[{"idlocalidad_2":10058,"idlocalidad_3":10745,"tipoinmueble":"Departamento","facet_tipoinmueble":"Departamento","comision":2.5,"imagen_principal":"","tourweb":"0","latitud":19.362562,"longitud":-99.30116,"autos":2,"cuartos":3,"gas":"No","calle":"Hidalgo RESIDENCIAL HIDALGO","idvivienda":0,"rentavdia":0,"fecha_baja":"2012-02-05T06:00:00Z","rentavfin":0,"num_ext":"","monedavmes":"","monedavdia":"","fecha_alta":"2011-05-15T05:00:00Z","logo":"\/admin\/inmobiliarias\/logos\/112558.jpg","idusuario":123746,"idlocalidad":10763,"expira":1,"andenes":"0","descripcion_desa":"","web":"www.quality.com.mx","m2terr":0,"idinmueble":2000807723,"monedavsem":"","rentavmes":0,"monedavfin":"","iddesarrollo":0,"fecha_suspen":"2012-02-05T06:00:00Z","tour":"0","estatus":"Activo","facet_estatus":"Activo","amueblado":"No","operacion":"Venta","facet_operacion":"Venta","precio_pesos":1445000,"idusuario_web":0,"alfaclave":"QU0078V000UJ","tel":"(55) 5251 1521","no_deptos":10,"m2rentable":0,"no_casas":0,"idtipoinmueble":8,"calle1":"","calle2":"","fecha_modif":"2012-01-06T06:00:00Z","claveinterna":"RAV-4036","msuperficie":0,"usuario_tel":"(55) 52511521","precio":1445000,"elevadores":0,"unidad":"T","nivel":"","rentavsem":0,"desarrollo":0,"mfondo":0,"email":"habitat@quality.com.mx","niveles":"4","usuario_email":"habitat@quality.com.mx","banos":2,"usuario":"Quality Inmobiliaria HABITAT","facet_usuario":"Quality Inmobiliaria HABITAT","gmap_confirma":1,"moneda":"P","idinmueble_pg":2000807723,"colonia":" Cuajimalpa ","facet_colonia":" Cuajimalpa ","infonavit":1,"idempresa":112558,"idpaquete":1,"id":"2000807723-V","edad":1,"email_desa":"","m2cons":106,"gmaps":"19.362562463638700,-99.301158958007800","comentarios":"","idcanal":1,"mfrente":0,"num_int":"","idoperacion":"1","estado":" Distrito Federal ","facet_estado":" Distrito Federal ","municipio":" Cuajimalpa De Morelos ","facet_municipio":" Cuajimalpa De Morelos ","empresa":"Quality Inmobiliaria H\u00e1bitat","facet_empresa":"Quality Inmobiliaria H\u00e1bitat","idestatus":1,"col_cp":" 5000","bsq_colonia":" Cuajimalpa ","facet_bsqcolonia":" Cuajimalpa ","bsq_idcolonia":10763,"origen":"M3","idfranquicia":[1,4,14,71,86,93],"qry":["Departamento","Hidalgo RESIDENCIAL HIDALGO","","Venta","RAV-4036"," Cuajimalpa ",""," Distrito Federal "," Cuajimalpa De Morelos ","Quality Inmobiliaria H\u00e1bitat"]}]}';
+					//$result=json_decode($result, true);
+					break;												
+
+	}
+
+class search{
+	public $baseSolr="http://10.87.175.8:8983/solr/";
+	#public $baseSolr="http://10.177.73.37:8983/solr/";
+
+	public $baseCore="propiedades";
+	public $baseCore2="inmobiliarias";
+
+	function getData($defsx,$indice=''){
+		$stringx=$this->baseSolr .$this->baseCore."/select/?".$defsx."&wt=json".$indice;
+		echo "<hr>$stringx<hr>";
+		$ch = curl_init($stringx);
+		//curl_setopt($ch, CURLOPT_BINARYTRANSFER, TRUE); // --data-binary
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+		//curl_setopt($ch, CURLOPT_HTTPHEADER,array('Content-Type: '.$this->updateContentType)); // -H
+		//curl_setopt($ch, CURLOPT_POSTFIELDS, $json); 
+		$response = curl_exec($ch);
+		curl_close($ch);
+		return $response;
+	}
+	
+	function getData2($defsx2){
+		//echo 'Cargada';
+		$stringx2=$this->baseSolr .$this->baseCore2."/select/?".$defsx2."&wt=json";
+		#echo "<hr>$stringx2<hr>";
+		$ch2 = curl_init($stringx2);
+		curl_setopt($ch2, CURLOPT_RETURNTRANSFER, TRUE);
+		$response2 = curl_exec($ch2);
+		curl_close($ch);
+		return $response2;
+	}	
+}
+		

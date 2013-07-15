@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>.::GRUPO PCP::.</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" media="handheld and (max-width: 480px), screen and (max-device-width: 480px),screen and (max-width: 600px)" href="css/mobile.css" />
+
+	<script src="js/jquery-1.8.2.min.js" type="text/javascript" charset="utf-8"></script> 
+	<script src="js/javascript_accordion.js" type="text/javascript"></script>
+
+	<script>
+	function cargar(div, desde)
+	{
+	     $(div).load(desde);
+	}
+	</script>
+	<script>	
+	    $.ajaxSetup({ cache: false });
+	</script>
+	<script type="text/javascript">
+		document.
+	</script>
+	<script type="text/javascript">
+
+
+	function swap(id, flag)
+	{
+		var path= "images/";
+		var path=path+flag;
+		
+		document.getElementById(id).src= path;
+	}
+
+	</script>
+
+	<script type="text/javascript">
+var inter = 0;
+var emp = 0;
+var per =0;
+function change(obj,flag) 
+{
+  
+
+  switch (flag) 
+  { 
+    case 1:
+        
+        if (inter==0) { obj.src='images/mobile/menu/btn_pcp_roll.jpg';inter=1;}
+        else{obj.src='images/mobile/menu/btn_pcp.jpg';inter=0;}
+        emp=0;
+        per=0;
+         document.getElementById('solempi').src= 'images/mobile/menu/btn_emp.jpg';
+         document.getElementById('solperi').src= 'images/mobile/menu/btn_per.jpg';
+         break 
+    case 2: 
+       
+        if (emp==0) { obj.src='images/mobile/menu/btn_emp_roll.jpg';emp=1;}
+        else{obj.src='images/mobile/menu/btn_emp.jpg';emp=0;}
+        inter=0;
+        per=0;
+         document.getElementById('interi').src= 'images/mobile/menu/btn_pcp.jpg';
+         document.getElementById('solperi').src= 'images/mobile/menu/btn_per.jpg';
+         break 
+    case 3: 
+         if (per==0) { obj.src='images/mobile/menu/btn_per_roll.jpg';per=1;}
+        else{obj.src='images/mobile/menu/btn_per.jpg';per=0;}
+        inter=0;
+        emp=0;
+         document.getElementById('solempi').src= 'images/mobile/menu/btn_emp.jpg';
+         document.getElementById('interi').src= 'images/mobile/menu/btn_pcp.jpg';
+         break 
+    default:
+        inter=0;
+        per=0;
+        emp=0; 
+         document.getElementById('solempi').src= 'images/mobile/menu/btn_emp.jpg';
+         document.getElementById('interi').src= 'images/mobile/menu/btn_pcp.jpg';
+         document.getElementById('solperi').src= 'images/mobile/menu/btn_per.jpg';
+  } 
+}
+</script>
+</head>
+<body>
+<div id="web">
+	<div  class="main">
+		<div class="logo">
+			<a href="index.html"><img class="scale_image" src="images/logo_PCP.png" ></a>
+		</div>
+<div class="center">
+		<div class="menu">
+			<div class="contact">
+				<a href="contacto.html"><img class="btn" src="images/menu/btn_contacto.png"></a>
+				<a href=""><img class="btn" src="images/menu/btn_twitter.png"></a>
+				<a href=""><img class="btn" src="images/menu/btn_facebook.png"></a>
+				<a href=""><img class="btn" src="images/menu/btn_linkedin.png"></a>
+			</div>
+			<div class="nav">
+				<a href="pcp.html" 
+				onmouseover="swap('pcp','menu/btn_PCP_roll.jpg')" 
+				onmouseout="swap('pcp','menu/btn_PCP.jpg')" >
+					<img id="pcp" src="images/menu/btn_PCP.jpg"></a>
+				<a href="fuerza.html"
+				onmouseover="swap('fue','menu/btn_fuerza_roll.jpg')" 
+				onmouseout="swap('fue','menu/btn_fuerza.jpg')" >
+					<img id="fue" name="image1" src="images/menu/btn_fuerza.jpg"></a>
+				<a href="empresa.html" 
+				onmouseover="swap('emp','menu/btn_empresariales_roll.jpg')" 
+				onmouseout="swap('emp','menu/btn_empresariales.jpg')" >
+					<img id="emp" src="images/menu/btn_empresariales.jpg"></a>
+				<a href="persona.html"
+				onmouseover="swap('per','menu/btn_personales_roll.jpg')" 
+				onmouseout="swap('per','menu/btn_personales.jpg')" >
+					<img id="per" src="images/menu/btn_personales.jpg"></a>
+				<a href="presencia.html"
+				onmouseover="swap('pres','menu/btn_presencia_roll.jpg')" 
+				onmouseout="swap('pres','menu/btn_presencia.jpg')" >
+					<img id="pres" src="images/menu/btn_presencia.jpg"></a>
+				<a href="gobierno.html"
+				onmouseover="swap('gob','menu/btn_gobierno_roll.jpg')" 
+				onmouseout="swap('gob','menu/btn_gobierno.jpg')" >
+					<img id="gob" src="images/menu/btn_gobierno.jpg"></a>
+			</div>
+		</div>
+
+		<div class="container">
+			
+			
+
+			<div id="change" class="art">
+			</div>
+
+			<script>
+	     		$('#change').load('home.html');
+	 
+			</script>
+		</div>
+
+	</div>
+</div>
+	<img class="colores" src="images/lineas_colores.jpg">
+
+	<div class="footer">
+		<img class="logo_footer" src="images/logo_CP.png">
+		<div class="txt_footer">
+			<span>Masaryk 111 piso 5. Chapultepec Morales.</span></br>
+			<span>México D.F. 11570 | T. 52559200</span>
+		</div>
+	</div>
+
+</div>
+	
+<!-- *********** Ver Mobile *********** -->
+<div class="mov">
+  <div class"men">
+    <div class="header">
+  
+      <div id="intro">
+          
+          <a href="/"><img class="logo_header"  src="images/mobile/logo_menu.png" alt="Grupo PCP" /></a>
+      </div>
+    </div>
+      <div id="wrapper">
+    <div class="accordionButton">
+      <img id="interi" onClick="change(this,1)" class="imgmenu" src="images/mobile/menu/btn_pcp.jpg" />
+    </div>
+    <div class="accordionContent"> 
+          <a href="pcp_movil.html?url=pcp_01.html"><img class="imgmenu" src="images/mobile/submenu/btn_acerca.jpg" alt="Acerca de"/></a>
+          <a href="pcp_movil.html?url=pcp_02.html"><img class="imgmenu" src="images/mobile/submenu/btn_porque.jpg" alt="Por que"/></a>
+         
+    </div>
+
+    <div class="accordionButton">
+      <a href="pcp_movil.html?url=fuerza_m.html"><img class="imgmenu" src="images/mobile/menu/btn_fuerza.jpg" alt="Presencia" /></a>
+    </div>
+
+    <div class="accordionButton">
+      <img id="solempi" onClick="change(this,2)" class="imgmenu" src="images/mobile/menu/btn_emp.jpg"  />
+    </div>
+    <div class="accordionContent"> 
+          <a href="pcp_movil.html?url=empresa_01.html"><img class="imgmenu" src="images/mobile/submenu/btn_autosycamiones.jpg"/></a>
+          <a href="pcp_movil.html?url=empresa_02.html"><img class="imgmenu" src="images/mobile/submenu/btn_beneficios.jpg" /></a>
+          <a href="pcp_movil.html?url=empresa_03.html"><img class="imgmenu" src="images/mobile/submenu/btn_danos.jpg" /></a>
+          <a href="pcp_movil.html?url=empresa_04.html"><img class="imgmenu" src="images/mobile/submenu/btn_fianzas.jpg" /></a>
+          <a href="pcp_movil.html?url=empresa_05.html"><img class="imgmenu" src="images/mobile/submenu/btn_siniestros.jpg" /></a>
+          <a href="pcp_movil.html?url=empresa_06.html"><img class="imgmenu" src="images/mobile/submenu/btn_innovacion.jpg" /></a>
+    </div>
+    <div class="accordionButton">
+      <img id="solperi" onClick="change(this,3)" class="imgmenu" src="images/mobile/menu/btn_per.jpg"  />
+      
+    </div>
+    <div class="accordionContent"> 
+          <a href="pcp_movil.html?url=persona_01.html"><img class="imgmenu" src="images/mobile/submenu/btn_autos.jpg"/></a>
+          <a href="pcp_movil.html?url=persona_02.html"><img class="imgmenu" src="images/mobile/submenu/btn_casa.jpg" /></a>
+          <a href="pcp_movil.html?url=persona_03.html"><img class="imgmenu" src="images/mobile/submenu/btn_beneficios.jpg" /></a>
+          <a href="pcp_movil.html?url=persona_04.html"><img class="imgmenu" src="images/mobile/submenu/btn_embarcaciones.jpg" /></a>
+          <a href="pcp_movil.html?url=persona_05.html"><img class="imgmenu" src="images/mobile/submenu/btn_fianzas.jpg" /></a>
+          
+    </div>
+    <div class="accordionButton">
+      <a href="pcp_movil.html?url=empresa_02_3.html"><img class="imgmenu" src="images/mobile/menu/btn_presencia.jpg" alt="Presencia" /></a>
+    </div>
+    
+    <div class="accordionButton">
+      <a href="pcp_movil.html?url=gobierno_01.html"><img class="imgmenu" src="images/mobile/menu/btn_gobierno.jpg" /></a>
+    </div>
+    
+    <div class="accordionButton">
+     <a href="contacto.html"><img class="imgmenu" src="images/mobile/menu/btn_contacto.jpg" alt="Contacto" /></a>
+    </div>
+
+    <div class="accordionButton">
+    <a href="https://mobile.twitter.com/@reasinter" target="_new"><img class="imgmenu" src="images/mobile/menu/btn_twitter.jpg" alt="Twitter" /></a>
+    </div>
+
+    <div class="accordionButton">
+    <a href="https://m.facebook.com/interproteccionmx" target="_new">
+                        <img class="imgmenu" src="images/mobile/menu/btn_facebook.jpg" alt="Facebook" /></a>
+    </div>
+
+  </div>
+  
+      <div class="foot">
+        <img class="imgmenu" src="images/mobile/footer.jpg" alt="foot" />
+      </div>
+  </div>
+</div>
+</body>
+
+</html>

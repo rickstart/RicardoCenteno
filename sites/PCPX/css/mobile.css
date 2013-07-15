@@ -1,0 +1,301 @@
+/* mobile */
+
+#web
+{
+	display:none;
+}
+
+.mov
+{
+	display:block;
+
+}
+.mov1
+{
+	display: block;
+}
+
+
+hr{
+	display: none;
+}
+
+
+
+/* Reseteamos los tags HTML y HTML5  */
+ 
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figure, figcaption, hgroup, 
+menu, footer, header, nav, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+ 
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+    display: block;
+}
+ 
+footer {
+	margin-bottom:0px;
+} 
+ 
+a img {border: 0;}
+
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    
+    color: #888888;
+    -webkit-text-size-adjust: 100%; /*  Para que Safari no haga auto-zoom*/
+}
+
+/*** styles ***/
+
+.imgs
+{
+    width: 100%;
+    min-height: 30px;
+    margin: 0;
+	margin-bottom: 15px;
+}
+
+.imgs2
+{
+    width: 100%;
+    min-height: 30px;
+    margin: 0;
+}
+
+.imgmenu
+{
+    width: 100%;
+    min-height: 30px;
+    margin: 0;
+
+}
+
+.imgs0
+{
+    width: 100%;
+    min-height: 30px;
+    margin: 0;
+}
+.imgs1
+{
+    width: 15%;
+    min-width: 20px;
+    min-height: 25px;
+    margin: 0;
+}
+
+
+
+.menu
+{
+    background:#222;
+
+}
+
+.mov
+{
+	display: block;
+	background: #222;
+}
+
+
+
+#intro {
+    width:100%;
+    background-image:url('../images/mobile/header_menu.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    	background-size: cover;
+    
+}
+
+  
+  	
+	/*         INTRODUCTION        */
+
+#container 
+{
+	 
+	width:100%;
+	 background-image:url('../images/mobile/bg_header.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        position: fixed;
+        z-index:1;
+        top:0;
+
+}
+
+	
+
+
+/******************   TEXT    ******************/
+
+p
+{
+	padding-right: 5%;
+	padding-left: 5%;
+	font-size:12px;
+	/*font-weight:bold;*/
+	color:#666;
+	text-align:left;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+/******Accordeon Styles *********/
+
+#wrapper {
+	width: 100%;
+	margin: 0;
+    padding: 0;
+	
+	}
+
+#wrapper li{
+	list-style-type: none;
+	margin: 0;
+    padding: 0;
+	}
+
+.accordionButton {	
+	width: 100%;
+	
+	_float: none;  /* Float works in all browsers but IE6 */
+	
+	
+	cursor: pointer;
+	}
+	
+.accordionContent {	
+	width: 100%;
+
+	_float: none; /* Float works in all browsers but IE6 */
+	background: #222;
+	margin: 0;
+    padding: 0;
+	}
+
+
+/**** Header ****/
+
+
+.logo_header
+{
+	position: relative;
+	width: 33%;
+	height: auto;
+	left: 33%;
+	padding: 2% 2% 2% 2%;
+	
+
+}
+.change
+{
+	
+	padding-top: 20%;
+	z-index:-1;
+
+}
+
+.img_sub img
+{
+
+	width: 100%;
+	height:auto;
+	
+	display: block;
+
+
+}
+
+.submenu
+{
+	display: none;
+}
+
+.sub_submenu
+{
+	display: none;
+}
+.sub_submenu_1
+{
+	display: none;
+}
+
+.sub_submenu_2
+{
+	display: none;
+}
+.sub_submenu_3
+{
+	display: none;
+}
+
+
+.header_menu
+{
+	position: relative;
+	width: 10%;
+	left: 65%;
+	padding: 2% 2% 2% 0%;
+
+
+}
+
+.logo_h
+{
+	position: relative;
+	width: 15%;
+	padding: 2% 2% 2% 2%;
+}
+
+
+li
+{
+	
+	font-size: medium;
+	color:#59595b;
+	font-family:Arial, Helvetica, sans-serif;
+
+}
+
+.img_cir
+{
+	width: 50%;
+	height:auto;
+	padding: 5% 25% 0% 25%;
+}
+
+
+
+form
+{
+	padding: 5% 25% 5% 5%;
+	width: 80%;
+}
+
+
+.list2
+{
+	position: relative;
+	top:0px;
+	left: 0px;
+}

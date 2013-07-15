@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>.::GRUPO PCP::.</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" media="handheld and (max-width: 480px), screen and (max-device-width: 480px),screen and (max-width: 600px)" href="css/mobile.css" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="js/jquery.form.js"></script> 
+    
+    <!--------SwapImage Script---------->
+		<script type="text/javascript" src="js/jquery.metadata.min.js"></script>
+        <script type="text/javascript" src="js/jquery.swapimage.min.js"></script>
+        
+        <!--Script SwapImage-->
+        <script type="text/javascript">
+                $.swapImage(".swapImage");    
+        </script>
+    
+	<script>
+	function cargar(div, desde)
+	{
+	     $(div).load(desde);
+	}
+	</script>
+	<script>	
+	    $.ajaxSetup({ cache: false });
+	</script>
+
+	<script type="text/javascript">
+
+
+	function swap(id, flag)
+	{
+		var path= "images/";
+		var path=path+flag;
+		
+		document.getElementById(id).src= path;
+	}
+
+    </script>
+    
+    <script type="text/javascript">
+	var RecaptchaOptions = 
+	{
+ 		lang : 'es',
+    	theme : 'clean',
+
+ 	};
+    </script>
+    
+    <script language="JavaScript" src="js/gen_validatorv4.js"
+    type="text/javascript" xml:space="preserve"></script>
+    
+    <script type="text/javascript"> 
+        // esperamos que el DOM cargue
+        $(document).ready(function() { 
+            // definimos las opciones del plugin AJAX FORM
+            var opciones= {
+                               beforeSubmit: mostrarLoader, //funcion que se ejecuta antes de enviar el form
+                               success: mostrarRespuesta, //funcion que se ejecuta una vez enviado el formulario
+							   
+            };
+             //asignamos el plugin ajaxForm al formulario myForm y le pasamos las opciones
+            $('#myForm').ajaxForm(opciones) ; 
+            
+             //lugar donde defino las funciones que utilizo dentro de "opciones"
+             function mostrarLoader(){
+                      $("#loader_gif").fadeIn("slow");
+             };
+             function mostrarRespuesta (responseText){
+             	if(responseText==1){
+             		alert("Mensaje Enviado, Gracias :)");
+             		window.location="contacto.html"	
+             	}
+             	else{
+             		$("#loader_gif").fadeOut("slow");
+				    alert(responseText);
+                    $("#ajax_loader").append("<br> "+responseText);
+                    Recaptcha.reload()
+                    }
+                    
+             };
+   
+        }); 
+    </script> 
+    
+</head>
+<body>
+<div id="web">
+	<div class="main">
+		<div class="logo">
+			<a href="index.html"><img class="scale_image" src="images/logo_PCP.png" ></a>
+		</div>
+
+		<div class="menu">
+			<div class="contact">
+				<a href="avisodeprivacidad.html" style="color:#68AA44;">LFDPPP y Avisos de Privacidad</a> |
+				<a href="contacto.html" style="color:#68AA44;">Contacto</a>
+				<a href="https://www.facebook.com/pcpseguros" target="_new"><img class="swapImage {src: 'images/menu/btn_facebook_roll.png'}" src="images/menu/btn_facebook.png" /></a>
+				<!--<a href=""><img class="swapImage {src: 'images/menu/btn_linkedin_roll.png'}" src="images/menu/btn_linkedin.png" /></a>-->
+			</div>
+			<div class="nav">
+				<a href="pcp.html" 
+				onmouseover="swap('pcp','menu/btn_PCP_roll.jpg')" 
+				onmouseout="swap('pcp','menu/btn_PCP.jpg')" >
+					<img id="pcp" src="images/menu/btn_PCP.jpg"></a>
+				<a href="fuerza.html"
+				onmouseover="swap('fue','menu/btn_fuerza_roll.jpg')" 
+				onmouseout="swap('fue','menu/btn_fuerza.jpg')" >
+					<img id="fue" name="image1" src="images/menu/btn_fuerza.jpg"></a>
+				<a href="empresa.html" 
+				onmouseover="swap('emp','menu/btn_empresariales_roll.jpg')" 
+				onmouseout="swap('emp','menu/btn_empresariales.jpg')" >
+					<img id="emp" src="images/menu/btn_empresariales.jpg"></a>
+				<a href="persona.html"
+				onmouseover="swap('per','menu/btn_personales_roll.jpg')" 
+				onmouseout="swap('per','menu/btn_personales.jpg')" >
+					<img id="per" src="images/menu/btn_personales.jpg"></a>
+				<a href="presencia.html"
+				onmouseover="swap('pres','menu/btn_presencia_roll.jpg')" 
+				onmouseout="swap('pres','menu/btn_presencia.jpg')" >
+					<img id="pres" src="images/menu/btn_presencia.jpg"></a>
+				<a href="gobierno.html"
+				onmouseover="swap('gob','menu/btn_gobierno_roll.jpg')" 
+				onmouseout="swap('gob','menu/btn_gobierno.jpg')" >
+					<img id="gob" src="images/menu/btn_gobierno.jpg"></a>
+			</div>
+		</div>
+
+		<div class="container">
+			<span class="txt_small txt_gray">Usted esta aquí:</span>
+			<div id="submenu" class="submenu">	
+				<a href=""><img src="images/submenu/t_contacto.png"></a>
+			</div>
+			
+
+			<div id="change" class="art">
+			</div>
+
+            <!--<div class="img_sub">
+					<img src="images/fotos/contacto2.png">
+                </div>-->
+                </br>
+                <p>Si deseas más información llena la siguiente forma y nos pondremos en contacto contigo.</p><br />
+		
+			<div class="list">
+					<ol class="txt_gray">
+						<li style="list-style-image: url('images/contacto/icono_telefono.png');">T. 5255-9200 ó 01-800-000-3121
+						</li>
+						<li style="list-style-image: url('images/contacto/icono_direccion.png');">D, Presidente Masaryk 111, piso 5, Col.Chapultepec Morales, C.P. 11570, México D.F.</li>
+					</ol>
+			</div>
+            
+		<p>Los campos con * son obligatorios</p>
+		</br>
+
+		<form id="myForm" name="contacto" action="send.php" method="post"> 
+			<label for="nombre" style="font-size:13px;">* Nombre: </label>  <br>
+			<input type="text" name="nombre"  maxlength="80"><br> 
+			<label for="empresa" style="font-size:13px;">* Empresa: </label><br>
+			<input type="text" name="empresa"  maxlength="60"><br> 
+			<label for="telefono" style="font-size:13px;">* Teléfono: </label><br>
+			<input type="text" name="telefono"  maxlength="60"><br>
+			<label for="email" style="font-size:13px;">* Email: </label><br>
+			<input type="text" name="email"  maxlength="60"><br> 
+			<label for="mensaje" style="font-size:13px;">* Mensaje: </label><br>  
+			<textarea name="mensaje" cols="12%" rows="4"></textarea> <br>
+			<div id="recaptcha">
+				<script type="text/javascript"
+	       			src="http://www.google.com/recaptcha/api/challenge?k=6LcbCt4SAAAAAP8kfIx8wG7xTYcYIQmY_-0xQ3E2">
+	    		</script>
+	    		<noscript>
+			       <iframe src="http://www.google.com/recaptcha/api/noscript?k=6LcbCt4SAAAAAP8kfIx8wG7xTYcYIQmY_-0xQ3E2"
+			           height="200" width="300" frameborder="0"></iframe><br>
+			       <textarea name="recaptcha_challenge_field" rows="3" cols="40">
+			       </textarea>
+			       <input type="hidden" name="recaptcha_response_field"
+			           value="manual_challenge">
+			    </noscript><br>
+			</div>
+			
+			<input type="image" class="btn_send2" name="enviar" src="images/contacto/btn_enviar.png" >
+			<div id="ajax_loader"><img id="loader_gif" src="images/ajax.gif" style=" display:none;"/></div>
+ 		</form>
+        <script language="JavaScript" type="text/javascript"
+    xml:space="preserve">//<![CDATA[
+//You should create the validator only after the definition of the HTML form
+  var frmvalidator  = new Validator("contacto");
+  frmvalidator.addValidation("nombre","req","Por favor escriba su nombre");
+  frmvalidator.addValidation("nombre","minlength=10","El campo Nombre requiere al menos 10 caracteres");
+  
+  frmvalidator.addValidation("empresa","req","Por favor escriba el nombre de su empresa");
+  frmvalidator.addValidation("empresa","minlength=5","El campo Empresa requiere al menos 5 caracteres");
+  
+  frmvalidator.addValidation("telefono","minlength=10","El número telefónico debe contener al menos 10 dígitos (inluir LADA)");
+  frmvalidator.addValidation("telefono","numeric","Escriba únicamente números");
+  
+  frmvalidator.addValidation("email","maxlen=50","Máximo 50 caracteres");
+  frmvalidator.addValidation("email","req","Por favor escriba su correo electrónico");
+  frmvalidator.addValidation("email","email","Por favor escriba un correo electrónico válido");
+  
+  frmvalidator.addValidation("mensaje","req","Por favor escriba su mensaje");
+  frmvalidator.addValidation("mensaje","minlength=10","El campo Mensaje requiere al menos 10 caracteres");
+
+//]]></script>
+            
+		</div>
+		
+	</div>
+
+	<img class="colores" src="images/lineas_colores.jpg">
+
+	<div class="footer">
+		<img class="logo_footer" src="images/logo_CP.png">
+		<div class="txt_footer">
+			<span>Masaryk 111 piso 5. Chapultepec Morales. México D.F. 11570 | T. 52559200</span>
+		</div>
+	</div>
+</div>
+
+<div class="mov1">
+  
+    <!--intro--> 
+    <div id="container2">
+      <img class="logo_h" src="images/mobile/logo_header.png"/>
+      <a href="index.html"><img class="header_menu" src="images/mobile/icono_menu.png" alt=" menu " /></a>
+    </div>
+      
+      <div id="change0" class="change">
+
+    <div class="">
+		<span class="title">Contacto</span><br>
+		<p>Si deseas más información llena la siguiente forma y nos pondremos en contacto contigo.</p>
+		</br></br>
+		
+			<div class="list">
+					<ol>
+						<li style="list-style-image: url('images/contacto/icono_telefono.png');">T. 5255-9200 ó 01-800-000-3121
+						</li><br>
+						
+						<li style="list-style-image: url('images/contacto/icono_direccion.png');">D, Presidente Masaryk 111, piso 5, Col.Chapultepec Morales, C.P. 11570, México D.F.</li><br>
+					</ol>
+			</div>
+		<p>Los campos con * son obligatorios</p>
+		</br></br>
+
+		<form name="contacto_movil" action="send.php" method="post"> 
+			<label for="nombre">* Nombre: </label>  <br>
+			<input type="text" name="nombre"  maxlength="80"><br> 
+			<label for="email">* Empresa: </label><br>
+			<input type="text" name="empresa" size="15%" maxlength="60"><br> 
+			<label for="email">* Teléfono: </label><br>
+			<input type="text" name="telefono" size="15%" maxlength="60"><br>
+			<label for="email">* Email: </label><br>
+			<input type="text" name="email" size="15%" maxlength="60"><br> 
+			<label for="mensaje">* Mensaje: </label><br>  
+			<textarea name="mensaje" cols="12%" rows="5"></textarea> <br><br>
+			<div id="recaptchare">
+				<script type="text/javascript">
+					$(document).ready(function() {
+					    // Duplicate our reCapcha 
+					    $('#recaptchare').html($('#recaptcha').clone(true,true));
+					});
+				</script>
+			</div>
+			<label for="enviar">
+			<input type="image" class="btn_send" name="enviar" src="images/contacto/btn_enviar.png" ></label>
+ 		</form>
+        <script language="JavaScript" type="text/javascript"
+    xml:space="preserve">//<![CDATA[
+//You should create the validator only after the definition of the HTML form
+  var frmvalidator  = new Validator("contacto_movil");
+  frmvalidator.addValidation("nombre","req","Por favor escriba su nombre");
+  frmvalidator.addValidation("nombre","minlength=10","El campo Nombre requiere al menos 10 caracteres");
+  
+  frmvalidator.addValidation("empresa","req","Por favor escriba el nombre de su empresa");
+  frmvalidator.addValidation("empresa","minlength=5","El campo Empresa requiere al menos 5 caracteres");
+  
+  frmvalidator.addValidation("telefono","minlength=10","El número telefónico debe contener al menos 10 dígitos (inluir LADA)");
+  frmvalidator.addValidation("telefono","numeric","Escriba únicamente números");
+  
+  frmvalidator.addValidation("email","maxlen=50","Máximo 50 caracteres");
+  frmvalidator.addValidation("email","req","Por favor escriba su correo electrónico");
+  frmvalidator.addValidation("email","email","Por favor escriba un correo electrónico válido");
+  
+  frmvalidator.addValidation("mensaje","req","Por favor escriba su mensaje");
+  frmvalidator.addValidation("mensaje","minlength=10","El campo Mensaje requiere al menos 10 caracteres");
+
+//]]></script>
+	</div>				
+
+    </div>
+   
+	  <div>
+        <img class="imgs" src="images/mobile/footer.jpg" alt="foot" />
+      </div>
+      
+</div>
+
+<!--<div class="mov1">
+    <div class"header">
+       intro 
+      <div id="container">
+        
+       
+          <img class="logo_h" src="images/mobile/logo_header.png"/>
+        
+          <a href="index.html"><img class="header_menu" src="images/mobile/icono_menu.png" alt=" menu " /></a>
+       
+      </div>
+    </div>
+    
+    <div id="change0" class="change"></div>
+    <div id="change1" class="change"></div>
+    <div id="change2" class="change"></div>
+    <div id="change3" class="change"></div>
+    <div id="change4" class="change"></div>
+		<script>
+	     	  $('#change0').load('contacto_m.html');
+             
+            
+	 
+			</script>
+    
+      <div>
+        <img class="imgs" src="images/mobile/footer.jpg" alt="foot" />
+      </div>
+  </div>-->
+
+</body>
+
+</html>

@@ -1,0 +1,446 @@
+/* mobile */
+
+#web
+{
+	display:block;
+}
+
+.mov
+{
+	display:none;
+}
+
+.mov1
+{
+	display:none;
+}
+
+body 
+{
+	background: url("../images/patron_background.jpg");
+	background-repeat:repeat-x;
+	background-color: #e6e9e2;
+}
+a
+{
+	text-decoration:none;
+
+}
+ul
+{
+	list-style-image: url("../images/icono_list.png");
+	top:2px;
+	position: relative;
+}
+
+hr
+{
+	position: relative;
+	top:-15px;
+}
+
+label {
+
+width: 100%;
+font-size: medium;
+	color:#59595b;
+}
+ 
+input 
+{
+position: relative;
+width: 100%;
+
+border: 1px #ccc solid;
+
+}
+
+textarea 
+{
+position: relative;
+width: 100%;
+border: 1px #ccc solid;
+
+}
+
+.btn_send
+{
+
+	width: 30%;
+	height: auto;
+
+}
+.footer
+{
+	background: url("../images/patron_footer.jpg");	
+	height: 57px;
+	position: relative;
+	clear: both;
+	width: 100%;
+	min-width: 1200px;
+}
+
+.main
+{
+	width: 100%;
+	min-width: 1200px;
+	height: 768px;	
+}
+
+.menu
+{
+	padding-top: 45px;
+
+}
+.menu, .container
+{
+	
+	position: relative;
+	width: 768px;
+	float: right;
+	margin-right: 15%; 
+
+}
+
+
+
+.logo
+{
+	position: relative;
+	width: 20%;
+	float: left;
+	padding-top: 120px;
+}
+
+
+.nav
+{
+	width: 100%;
+}
+.contact
+{
+
+	width: 99%;
+	text-align: right;
+	padding-bottom: 5px;
+	
+
+}
+
+.scale_image
+{
+	max-width: 100%;
+	height: auto;
+}
+.colores
+{
+	width: 100%;
+	min-height:5px;
+	min-width: 1200px;
+
+}
+
+
+.list
+{
+	position: relative;
+	padding-left: 25px;
+}
+.list1
+{
+	position: relative;
+	width: 40%;
+	float: left;
+	padding-left: 10%;
+}
+.list2
+{
+	position: relative;
+	width: 40%;
+	float: left;
+	padding-left: 7%;
+}
+
+
+/**TEXTO**/
+
+p, .art
+{
+	font-size: medium;
+	color:#59595b;
+
+}
+
+.txt_small
+{
+	font-size: 10px;
+}
+
+.txt_medium
+{
+	font-size: 14px;
+}
+.title
+{
+	font-size: 35px;
+	color:#59595b;
+	font-style: bold;
+	font-weight:900;
+	padding-bottom: 0px;
+}
+
+.title_green
+{
+	font-size: 35px;
+	color:#83b817;
+	font-style: bold;
+	font-weight: 900;
+	padding-bottom: 0px;
+}
+
+.txt_green
+{
+	color:#83b817;	
+}
+
+.txt_gray
+{
+	color:#59595b;	
+}
+
+.txt_footer
+{
+	font-size: 10px;
+	color:#fff;
+	position: relative;
+	top:-20px;
+	left: 72%;
+	width: 20%;
+}
+
+.art
+{
+
+}
+
+.logo_footer
+{
+	position: relative;
+	left: 90%;
+	top: 11px;
+}
+
+/*** Submenu ***/
+
+
+.img_des
+{
+	position: relative;
+	left: -10px;
+}
+.img_des_1
+{
+	position: relative;
+	left: -20px;
+}
+
+.img_des_2
+{
+	position: relative;
+	left: -30px;
+}
+
+.img_des_3
+{
+	position: relative;
+	left: -40px;
+}
+
+.img_des_4
+{
+	position: relative;
+	left: -50px;
+}
+
+.img_des_5
+{
+	position: relative;
+	left: -60px;
+}
+.img_des_6
+{
+	position: relative;
+	left: -70px;
+}
+
+/*** Sub Sub Menu ***/
+
+.sub_submenu
+{
+	position: relative;
+	left: 210px;
+}
+
+
+.sub_submenu_1
+{
+	position: relative;
+	left: 331px;
+}
+
+.sub_submenu_2
+{
+	position: relative;
+	left: 393px;
+}
+.sub_submenu_3
+{
+	position: relative;
+	left: 490px;
+}
+
+/*** Fuerza ***/
+
+.btn:hover
+{
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+}
+
+.cir_r
+{
+	position: relative;
+	left: 150px;
+	top:20px;
+}
+
+.cir_p
+{
+	position: relative;
+	left: 335px;
+	top:20px;
+}
+
+.cir_a
+{
+	position: relative;
+	left: 370px;
+	top:-20px;
+}
+
+.cir_c
+{
+	position: relative;
+	left: 170px;
+	top:-20px;
+}
+
+.cir_i
+{
+	position: relative;
+	left: -10px;
+	top:-20px;
+}
+
+
+/*** Contacto ***/
+
+.c_left
+{
+	position: relative;
+	float: left;
+	width: 65%;
+
+
+}
+.c_right
+{
+	position: relative;
+	float: left;
+	width: 30%;
+	font-size: 12px;
+	border-left: 1px #ccc solid;
+	padding-left: 10px;
+}
+.c_foot
+{
+	clear: both;
+	width: 100%;
+}
+
+.indicador
+{
+	position: relative;
+	top:-153px;
+	left:257px;
+}
+input 
+{ 
+	-webkit-border-radius: 7px; 
+	-moz-border-radius: 7px; 
+	border-radius: 7px; 
+}
+
+textarea 
+{ 
+	-webkit-border-radius: 7px; 
+	-moz-border-radius: 7px; 
+	border-radius: 7px; 
+}
+
+/*** Home ***/
+
+.h_col1
+{
+	position: relative;
+	width: 250px;
+	float: left;
+
+}
+
+.h_col2
+{
+	position: relative;
+	float: left;
+	
+	width: 247px;
+}
+
+.h_col3
+{
+	position: relative;
+	float: left;
+	
+	width: 250px;
+}
+
+/*** Modal ***/
+
+.modal
+{
+	position: absolute;
+	visibility: hidden;
+
+	/*background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc), color-stop(1, #ccc) );
+	*/
+	background: url("../images/patron_background_inv_small.jpg");
+	
+	width: 250px;
+	/*top:37px;
+	left:230px;*/
+	padding: 2% 2% 2% 4%;
+	border-radius: 8px 8px 8px 8px;
+
+}
+.modal:after
+{
+	content: ""; 
+	position: absolute; 
+	top: 100%; 
+	left: 10px; 
+
+	border-top: 20px solid blue; 
+	border-top-color: #ccc; 
+	border-left: 20px solid transparent; 
+	border-right: 20px solid transparent;
+}

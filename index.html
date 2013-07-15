@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel='stylesheet' type='text/css' href='css/reset.css'>
+    <link rel='stylesheet' type='text/css' href='css/styles.css'>
+    <script src="js/jquery-1.8.2.min.js" type="text/javascript" charset="utf-8"></script> 
+    
+    <script>  
+      $.ajaxSetup({ cache: false });
+    </script>
+
+    <script>
+      function load(site)
+      {
+            $('#change').load(site);
+      }
+        
+
+     
+    </script>
+    <script type="text/javascript">
+
+    var one=0;
+    var two=0;
+    var three=0;
+
+      function over(obj)
+      {
+        switch(obj.id)
+        {
+          case 'one':
+            obj.src='img/btn_about_roll.png';
+            break;
+
+          case 'two':
+            obj.src='img/btn_web_roll.png';
+            break;
+
+          case 'three':
+            obj.src='img/btn_mobile_roll.png';
+            break;
+        }
+        
+      }
+
+      function out(obj)
+      {
+        switch(obj.id)
+        {
+          case 'one':
+
+            if(one!=1){obj.src='img/btn_about.png';}
+            break;
+
+          case 'two':
+            if(two!=1){obj.src='img/btn_web.png';}
+            break;
+
+          case 'three':
+            if(three!=1){obj.src='img/btn_mobile.png';}
+            break;
+        }
+        
+      }
+
+      function swap(id)
+      {
+       
+        
+        switch(id)
+        {
+          case 1:
+            document.getElementById('one').src= 'img/btn_about_roll.png'; 
+            document.getElementById('two').src= 'img/btn_web.png'; 
+            document.getElementById('three').src= 'img/btn_mobile.png';
+            one=1;
+            two=0;
+            three=0; 
+            break; 
+
+          case 2:
+            document.getElementById('two').src= 'img/btn_web_roll.png'; 
+            document.getElementById('one').src= 'img/btn_about.png'; 
+            document.getElementById('three').src= 'img/btn_mobile.png'; 
+            one=0;
+            two=1;
+            three=0; 
+            break; 
+
+          case 3:
+            document.getElementById('three').src= 'img/btn_mobile_roll.png'; 
+            document.getElementById('one').src= 'img/btn_about.png'; 
+            document.getElementById('two').src= 'img/btn_web.png'; 
+            one=0;
+            two=0;
+            three=1; 
+            break; 
+        }
+       
+      }
+    
+    </script>
+  </head>
+  <body>
+    <div class="nav">
+      <img src="img/banner.png" class="img_menu">
+      <a  onclick="load('about.html')" href="#"><img id="one" onclick="swap(1)" onmouseover="over(this)" onmouseout="out(this)" src="img/btn_about.png" class="btn_menu"></a><br><br>
+      <a onclick="load('web.html')" href="#"><img id="two" onclick="swap(2)" onmouseover="over(this)" onmouseout="out(this)" src="img/btn_web.png" class="btn_menu"></a><br><br>
+      <a onclick="load('mobile.html')" href="#"><img id="three" onclick="swap(3)" onmouseover="over(this)" onmouseout="out(this)" src="img/btn_mobile.png" class="btn_menu"></a></br><br>
+      
+    </div>
+  
+  	<div class="content">
+      <div class="thumb">
+  	    <p class="title"><br>Ricardo Centeno<br>Developer Back-end & Front-end</p>
+
+        <div id="change">
+          
+          <img  class="pack" src="img/package_code.png">
+
+        
+        </div>
+
+        
+      </div>
+
+  	</div>
+  </body>
+</html>
